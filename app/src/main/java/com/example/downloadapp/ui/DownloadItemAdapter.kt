@@ -43,7 +43,7 @@ class DownloadItemAdapter(val itemListener: OnDownloadActionPerform): RecyclerVi
         notifyItemChanged(position)
     }
 
-    fun onCancel(error: String, position: Int) {
+    fun onCancel(position: Int) {
         downloadItemList[position].progress = 0
         downloadItemList[position].status = DataHelper.STOP
         notifyItemChanged(position)
